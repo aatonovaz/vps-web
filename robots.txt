@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aatonovaz.github.io/vps/sitemap.xml

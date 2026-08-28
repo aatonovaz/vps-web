@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>VPS Map Viewer</title>
+ <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+ <style>
+ body { margin: 0; font-family: system-ui, sans-serif; background: #0a0a0f; color: #e0e0e0; }
+ header { padding: 20px; background: linear-gradient(135deg, #1a1a2e, #16213e); }
+ h1 { margin: 0; font-size: 1.5em; }
+ #plot { width: 100%; height: calc(100vh - 80px); }
+ .controls { padding: 10px 20px; display: flex; gap: 10px; align-items: center; }
+ button { padding: 8px 16px; background: #00d4ff; border: none; border-radius: 6px; cursor: pointer; }
+ button:hover { opacity: 0.9; }
+ input { padding: 8px; background: #1a1a2e; border: 1px solid #2a2a3a; border-radius: 6px; color: #e0e0e0; }
+ </style>
+</head>
+<body>
+ <header>
+ <h1>VPS Map Viewer</h1>
+ <div class="controls">
+ <input type="text" id="mapUrl" placeholder="Paste vps_map.json URL or path" value="maps/demo/vps_map.json">
+ <button onclick="loadMap()">Load Map</button>
+ <button onclick="loadDemo()">Load Demo</button>
+ </div>
+ </header>
+ <div id="plot"></div>
+ <script>
+ let mapData = null;
+
+ async function loadMap() {
+ const url = document.getElementById("mapUrl").value;
+ try {
+ const resp = await fetch(url);
+ mapData = await resp.json();
+ renderMap();
+ } catch (e) {
+ alert("Failed to load map: " + e.message);
+ }
+ }
+
+ function loadDemo() {
+ mapData = {
+ images: Array.from({length: 50}, (_, i) => ({
+ tx: Math.cos(i * 0.5) * 5,
+ ty: Math.sin(i * 0.5) * 5,
+ tz: Math.random() * 2,
+ })),
+ point_cloud: Array.from({length: 500}, () => ({
+ position: [(Math.random() - 0.5) * 10, (Math.random() - 0.5) * 10, Math.random() * 3],
+ })),
+ num_points_3d: 500,
+ };
+ renderMap();
+ }
+
+ function renderMap() {
+ if (!mapData) return;
+ const points = mapData.point_cloud || [];
+ const images = mapData.images || [];
+ const trace1 = {
+ x: points.map(p => p.position[0]),
+ y: points.map(p => p.position[1]),
+ z: points.map(p => p.position[2]),
+ mode: "markers",
+ type: "scatter3d",
+ marker: { size: 2, color: points.map(p => p.position[2]), colorscale: "Viridis", opacity: 0.6 },
+ name: "3D Points",
+ };
+ const trace2 = {
+ x: images.map(i => i.tx),
+ y: images.map(i => i.ty),
+ z: images.map(i => i.tz),
+ mode: "markers",
+ type: "scatter3d",
+ marker: { size: 8, color: "red", symbol: "diamond" },
+ name: "Camera Poses",
+ };
+ const layout = {
+ paper_bgcolor: "#0a0a0f",
+ plot_bgcolor: "#0a0a0f",
+ font: { color: "#e0e0e0" },
+ scene: { xaxis: {title: "X (m)", gridcolor: "#2a2a3a"}, yaxis: {title: "Y (m)", gridcolor: "#2a2a3a"}, zaxis: {title: "Z (m)", gridcolor: "#2a2a3a"} },
+ margin: { l: 0, r: 0, t: 40, b: 0 },
+ title: `VPS Map — ${mapData.num_points_3d || 0} points, ${images.length} poses`,
+ };
+ Plotly.newPlot("plot", [trace1, trace2], layout);
+ }
+
+ // Auto-load demo on start
+ loadDemo();
+ </script>
+</body>
+</html>

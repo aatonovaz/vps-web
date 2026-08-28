@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+ <defs>
+ <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+ <stop offset="0%" style="stop-color:#0a0a1a"/>
+ <stop offset="100%" style="stop-color:#1a1a3e"/>
+ </linearGradient>
+ <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+ <stop offset="0%" style="stop-color:#00d4ff"/>
+ <stop offset="100%" style="stop-color:#7b2fff"/>
+ </linearGradient>
+ </defs>
+ <rect width="1200" height="630" fill="url(#bg)"/>
+ <circle cx="900" cy="150" r="250" fill="url(#accent)" opacity="0.08"/>
+ <circle cx="200" cy="500" r="300" fill="url(#accent)" opacity="0.05"/>
+ <text x="80" y="140" font-family="system-ui, sans-serif" font-size="72" font-weight="bold" fill="white">VPS</text>
+ <text x="80" y="210" font-family="system-ui, sans-serif" font-size="36" fill="url(#accent)">Visual Positioning System</text>
+ <text x="80" y="310" font-family="system-ui, sans-serif" font-size="22" fill="#8888aa">Any camera. Any platform. Centimeter-true 6-DoF.</text>
+ <rect x="80" y="350" width="1040" height="1" fill="#2a2a4a"/>
+ <text x="80" y="420" font-family="system-ui, sans-serif" font-size="20" fill="#6666aa">9 SDKs</text>
+ <text x="250" y="420" font-family="system-ui, sans-serif" font-size="20" fill="#6666aa">8 AI Runtimes</text>
+ <text x="460" y="420" font-family="system-ui, sans-serif" font-size="20" fill="#6666aa">12 Sensors</text>
+ <text x="660" y="420" font-family="system-ui, sans-serif" font-size="20" fill="#6666aa">Full ROS2</text>
+ <text x="860" y="420" font-family="system-ui, sans-serif" font-size="20" fill="#6666aa">Apache 2.0</text>
+ <text x="80" y="510" font-family="system-ui, sans-serif" font-size="18" fill="#44446a">github.com/aatonovaz/vps</text>
+</svg>
