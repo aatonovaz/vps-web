@@ -5,7 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>VPS — Visual Positioning System</title>
  <meta name="description" content="Open-source Visual Positioning System — 9 SDKs, 8 AI runtimes, full ROS2 integration">
- <link rel="canonical" href="https://aatonovaz.github.io/vps/">
+ <link rel="canonical" href="https://aatonovaz.github.io/vps-web/">
  <style>
  * { margin: 0; padding: 0; box-sizing: border-box; }
  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0f; color: #e0e0e0; min-height: 100vh; }
@@ -33,6 +33,8 @@
  .cta { display: inline-block; padding: 15px 40px; background: linear-gradient(90deg, #00d4ff, #7b2fff); color: white; text-decoration: none; border-radius: 30px; font-size: 1.1em; font-weight: 600; margin: 20px 10px; transition: transform 0.2s; }
  .cta:hover { transform: scale(1.05); }
  footer { text-align: center; padding: 40px 20px; color: #606070; border-top: 1px solid #1a1a2e; }
+ .repo-link { background: #1a2a1a; border: 1px solid #2a3a2a; padding: 15px 25px; border-radius: 12px; margin: 20px 0; display: inline-block; }
+ .repo-link a { color: #00d4ff; text-decoration: none; font-weight: 600; }
  </style>
 </head>
 <body>
@@ -46,8 +48,12 @@
  <span class="badge badge-cpp">C++17</span>
  </div>
  <div style="margin-top: 30px;">
- <a href="https://github.com/aatonovaz/vps" class="cta">View on GitHub</a>
- <a href="https://aatonovaz.github.io/vps/map-viewer.html" class="cta" style="background: linear-gradient(90deg, #7b2fff, #00d4ff);">3D Map Viewer</a>
+ <a href="https://github.com/aatonovaz/vps" class="cta">Main Repo</a>
+ <a href="https://aatonovaz.github.io/vps-web/map-viewer.html" class="cta" style="background: linear-gradient(90deg, #7b2fff, #00d4ff);">3D Map Viewer</a>
+ </div>
+ <div class="repo-link">
+ <p style="color: #a0a0b0; margin-bottom: 10px;">Source Code & Documentation</p>
+ <a href="https://github.com/aatonovaz/vps">github.com/aatonovaz/vps</a>
  </div>
  </div>
 
@@ -76,7 +82,7 @@
  </div>
 
  <div class="section">
- <h2>🚀 Features</h2>
+ <h2>Features</h2>
  <div class="grid">
  <div class="card">
  <h3>Hierarchical Localization</h3>
@@ -84,67 +90,49 @@
  </div>
  <div class="card">
  <h3>8 AI Runtimes</h3>
- <p>PyTorch, ONNX, TensorRT, OpenVINO, CoreML, NCNN, TFLite, MLKit — deploy on any hardware</p>
+ <p>PyTorch, ONNX, TensorRT, OpenVINO, CoreML, NCNN, TFLite, MLKit</p>
  </div>
  <div class="card">
  <h3>10 Platform SDKs</h3>
- <p>Python, iOS, Android, WebXR, Flutter, React Native, Rust, Unity, WASM, and more</p>
+ <p>Python, iOS, Android, WebXR, Flutter, React Native, Rust, Unity, WASM</p>
  </div>
  <div class="card">
  <h3>Full ROS2 Integration</h3>
- <p>Nav2, MoveIt, TF2, Gazebo, Isaac Sim — first-class robotics support</p>
+ <p>Nav2, MoveIt, TF2, Gazebo, Isaac Sim</p>
  </div>
  <div class="card">
  <h3>Real-Time Streaming</h3>
- <p>WebSocket + SSE streaming for video frame processing at 30+ FPS</p>
+ <p>WebSocket + SSE streaming for 30+ FPS video processing</p>
  </div>
  <div class="card">
  <h3>Production Ready</h3>
- <p>Docker, Kubernetes, Helm, Terraform, Prometheus — deploy anywhere</p>
+ <p>Docker, Kubernetes, Helm, Terraform, Prometheus</p>
  </div>
  </div>
  </div>
 
  <div class="section">
- <h2>📊 Performance</h2>
+ <h2>Performance</h2>
  <div class="grid">
  <div class="card">
  <h3>Latency</h3>
- <p>10-50ms per frame on edge devices (Jetson Orin, RK3588, Pi5)</p>
+ <p>10-50ms per frame on edge devices</p>
  </div>
  <div class="card">
  <h3>Accuracy</h3>
- <p>~10cm indoor, ~20cm outdoor with pre-built maps</p>
+ <p>~10cm indoor, ~20cm outdoor</p>
  </div>
  <div class="card">
  <h3>Throughput</h3>
- <p>30+ FPS real-time streaming with GPU acceleration</p>
- </div>
- </div>
- </div>
-
- <div class="section">
- <h2>🛠️ Tech Stack</h2>
- <div class="grid">
- <div class="card">
- <h3>Core Pipeline</h3>
- <p>COLMAP, SuperPoint, SuperGlue, DINOv2, hloc, NetVLAD</p>
- </div>
- <div class="card">
- <h3>Hardware</h3>
- <p>Jetson Orin, RK3588, Pi5, Raspberry Pi, x86, ARM, Apple Silicon</p>
- </div>
- <div class="card">
- <h3>Cloud</h3>
- <p>AWS ECS/EKS, GCP Cloud Run, Azure AKS, Kubernetes, Docker</p>
+ <p>30+ FPS with GPU acceleration</p>
  </div>
  </div>
  </div>
 
  <div class="section" style="text-align: center; padding: 60px 20px;">
  <h2 style="margin-bottom: 30px;">Ready to Get Started?</h2>
- <a href="https://github.com/aatonovaz/vps" class="cta">View on GitHub</a>
- <a href="https://aatonovaz.github.io/vps/map-viewer.html" class="cta" style="background: linear-gradient(90deg, #7b2fff, #00d4ff);">Explore 3D Maps</a>
+ <a href="https://github.com/aatonovaz/vps" class="cta">View Source Code</a>
+ <a href="https://aatonovaz.github.io/vps-web/map-viewer.html" class="cta" style="background: linear-gradient(90deg, #7b2fff, #00d4ff);">Explore 3D Maps</a>
  <p style="margin-top: 30px; color: #606070;">
  <a href="https://github.com/aatonovaz/vps/releases" style="color: #00d4ff; text-decoration: none;">Releases</a> ·
  <a href="https://github.com/aatonovaz/vps/blob/main/CONTRIBUTING.md" style="color: #00d4ff; text-decoration: none;">Contribute</a> ·
@@ -154,11 +142,11 @@
  </div>
 
  <footer>
- <p>VPS — Visual Positioning System | Apache 2.0 License | © 2026 AatoNovaZ</p>
+ <p>VPS — Visual Positioning System | Apache 2.0 License | 2026 AatoNovaZ</p>
  <p style="margin-top: 10px;">
- <a href="https://github.com/aatonovaz/vps" style="color: #606070; text-decoration: none;">GitHub</a> ·
- <a href="https://github.com/aatonovaz/vps/releases" style="color: #606070; text-decoration: none;">Releases</a> ·
- <a href="https://github.com/aatonovaz/vps/blob/main/CHANGELOG.md" style="color: #606070; text-decoration: none;">Changelog</a>
+ <a href="https://github.com/aatonovaz/vps" style="color: #606070; text-decoration: none;">Main Repo</a> ·
+ <a href="https://github.com/aatonovaz/vps-web" style="color: #606070; text-decoration: none;">This Site</a> ·
+ <a href="https://github.com/aatonovaz/vps/releases" style="color: #606070; text-decoration: none;">Releases</a>
  </p>
  </footer>
 </body>
