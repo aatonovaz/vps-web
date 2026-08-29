@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+<defs>
+<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+<stop offset="100%" style="stop-color:#7b2fff;stop-opacity:1" />
+</linearGradient>
+</defs>
+<rect width="800" height="500" fill="#0a0a0f"/>
+<text x="400" y="30" font-family="Arial" font-size="18" font-weight="bold" fill="white" text-anchor="middle">VPS Architecture</text>
+
+<!-- App Layer -->
+<rect x="20" y="50" width="760" height="70" rx="10" fill="#1a1a24" stroke="url(#grad1)" stroke-width="2"/>
+<text x="400" y="75" font-family="Arial" font-size="14" font-weight="bold" fill="#00d4ff" text-anchor="middle">App Layer</text>
+<text x="400" y="95" font-family="Arial" font-size="11" fill="#a0a0b0" text-anchor="middle">Python SDK</text>
+<text x="400" y="112" font-family="Arial" font-size="11" fill="#a0a0b0" text-anchor="middle">iOS · Android · Flutter · React Native · Rust · Unity · WASM · WebXR</text>
+
+<!-- Server Layer -->
+<rect x="20" y="140" width="760" height="60" rx="10" fill="#1a1a24" stroke="#7b2fff" stroke-width="2"/>
+<text x="400" y="165" font-family="Arial" font-size="14" font-weight="bold" fill="#7b2fff" text-anchor="middle">Server Layer</text>
+<text x="400" y="185" font-family="Arial" font-size="11" fill="#a0a0b0" text-anchor="middle">FastAPI REST · gRPC · WebSocket · SSE · MQTT · Webhooks</text>
+
+<!-- Pipeline Layer -->
+<rect x="20" y="220" width="760" height="60" rx="10" fill="#1a1a24" stroke="#ff2d95" stroke-width="2"/>
+<text x="400" y="245" font-family="Arial" font-size="14" font-weight="bold" fill="#ff2d95" text-anchor="middle">Pipeline Layer</text>
+<text x="400" y="265" font-family="Arial" font-size="11" fill="#a0a0b0" text-anchor="middle">COLMAP · SuperPoint · SuperGlue · DINOv2 · NetVLAD · hloc</text>
+
+<!-- Runtime Layer -->
+<rect x="20" y="300" width="760" height="60" rx="10" fill="#1a1a24" stroke="#00ff88" stroke-width="2"/>
+<text x="400" y="325" font-family="Arial" font-size="14" font-weight="bold" fill="#00ff88" text-anchor="middle">Runtime Layer</text>
+<text x="400" y="345" font-family="Arial" font-size="11" fill="#a0a0b0" text-anchor="middle">PyTorch · ONNX · TensorRT · OpenVINO · CoreML · NCNN · TFLite · MLKit</text>
+
+<!-- Hardware Layer -->
+<rect x="20" y="380" width="760" height="60" rx="10" fill="#1a1a24" stroke="#ffaa00" stroke-width="2"/>
+<text x="400" y="405" font-family="Arial" font-size="14" font-weight="bold" fill="#ffaa00" text-anchor="middle">Hardware Layer</text>
+<text x="400" y="425" font-family="Arial" font-size="11" fill="#a0a0b0" text-anchor="middle">Jetson Orin · RK3588 · Pi 5 · Apple Silicon · ZED · RealSense · OAK</text>
+
+<!-- Arrows -->
+<line x1="400" y1="120" x2="400" y2="140" stroke="white" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="400" y1="200" x2="400" y2="220" stroke="white" stroke-width="2"/>
+<line x1="400" y1="280" x2="400" y2="300" stroke="white" stroke-width="2"/>
+<line x1="400" y1="360" x2="400" y2="380" stroke="white" stroke-width="2"/>
+
+<text x="400" y="470" font-family="Arial" font-size="11" fill="#606070" text-anchor="middle">Apache 2.0 Licensed · 10 SDKs · 8 AI Runtimes · OSS-Agnostic</text>
+</svg>
