@@ -1,0 +1,16 @@
+name: Deploy Web Demo
+'on':
+ push:
+ branches: [main]
+jobs:
+ validate:
+ runs-on: ubuntu-latest
+ steps:
+ - uses: actions/checkout@v4
+ - name: Validate HTML
+ run: |
+ python -c "
+with open('index.html') as f: c = f.read()
+assert c.startswith('<!DOCTYPE html>')
+print('HTML valid')
+"
